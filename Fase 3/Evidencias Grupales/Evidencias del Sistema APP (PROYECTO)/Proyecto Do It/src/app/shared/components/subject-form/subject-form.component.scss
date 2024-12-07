@@ -1,0 +1,44 @@
+ion-header {
+    --background: var(--ion-color-primary); /* Fondo de la barra */
+    --color: var(--ion-color-light); /* Color de texto */
+  }
+  
+  ion-toolbar ion-title {
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .modal-form {
+    padding: 20px;
+  
+    ion-item {
+      --border-radius: 8px;
+      margin-bottom: 15px;
+      background: var(--ion-color-light);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    }
+  
+    .submit-button {
+      margin-top: 20px;
+      --background: var(--ion-color-primary);
+      --color: var(--ion-color-light);
+      font-weight: lighter;
+    }
+  
+    .submit-button:disabled {
+      opacity: 0.5;
+    }
+  }
+  
+  ion-content {
+    --padding-start: 20px;
+    --padding-end: 20px;
+  }
+  
+  .boton {
+
+    width: 300px;
+    height: 60px;
+
+}

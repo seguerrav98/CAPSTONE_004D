@@ -1,0 +1,25 @@
+.settings-container {
+    padding: 10px; // Espaciado interno general
+    border-radius: 10px; // Bordes redondeados del contenedor
+    background-color: var(--ion-color-light); // Fondo del contenedor
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para darle profundidad
+  }
+  
+  ion-list {
+    --ion-item-background: transparent; // Fondo transparente para los items
+  }
+  
+  ion-item {
+    margin-bottom: 8px; // Espacio entre los items
+    border-radius: 10px; // Bordes redondeados
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra opcional para los items
+  }
+  
+  ion-button {
+    margin-top: 16px; // Margen superior para el botón de cerrar sesión
+    border-radius: 10px; // Bordes redondeados para el botón
+  }
+  
+  .title {
+    text-align: center;
+  }

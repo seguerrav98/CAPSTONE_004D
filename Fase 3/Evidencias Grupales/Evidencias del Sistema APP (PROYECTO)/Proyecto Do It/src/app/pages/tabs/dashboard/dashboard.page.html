@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'INICIO' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/tabs/profile']" class="add-task-button">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard-content">
+    
+<!-- Bienvenida -->
+<ion-card class="welcome-card">
+  <ion-card-header>
+    <ion-card-title class="titulodashboard">
+      {{ 'BIENVENIDODASH' | translate }} {{ user.name }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="welcome-content">
+      <ion-icon name="sunny-outline" style="color: var(--ion-color-warning); font-size: 28px; margin-right: 8px;"></ion-icon>
+      <ion-text color="var(--ion-color-secondary)">
+        <p>{{ 'MENSAJEBIENVENIDA' | translate }}</p>
+      </ion-text>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+<!-- Eventos del Día -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="titulodashboard">
+      <ion-icon name="calendar-outline" slot="start" style="margin-right: 8px; color: var(--ion-color-primary);"></ion-icon>
+      {{ 'EVENTOSDELDIA' | translate }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div *ngIf="events.length > 0; else noEvents">
+      <div class="timeline">
+        <div *ngFor="let event of events" class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>{{ event.title }}</h3>
+            <p>{{ event.description }}</p>
+            <p class="event-time">{{ event.date | date: 'shortTime' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noEvents>
+      <ion-text>{{ 'NOEVENT' | translate }}</ion-text>
+    </ng-template>
+  </ion-card-content>
+</ion-card>
+
+<!-- Recordatorio Próximo -->
+<ion-card class="reminder-card">
+  <ion-card-header>
+    <ion-card-title class="titulodashboard">
+      <ion-icon name="alarm-outline" slot="start" color="danger"></ion-icon> <!-- Icono de recordatorio -->
+      {{ 'PROXRECOR' | translate }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div *ngIf="upcomingReminder; else noReminder" class="animated-reminder">
+      <ion-item lines="none">
+        <ion-icon name="notifications-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>
+          <h2>{{ upcomingReminder.title }}</h2>
+          <p>{{ upcomingReminder.description }}</p>
+        </ion-label>
+      </ion-item>
+      <p class="reminder-time">{{ 'FECHAVENC' | translate }} {{ upcomingReminder.endDate | date: 'short' }}</p>
+    </div>
+    <ng-template #noReminder>
+      <ion-item lines="none">
+        <ion-icon name="happy-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          <h2>{{ 'NORECOR' | translate }}</h2>
+          <p>{{ 'DISFRUTA' | translate }}</p>
+        </ion-label>
+      </ion-item>
+    </ng-template>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="titulodashboard">
+      <ion-icon name="bar-chart-outline" slot="start" style="margin-right: 8px; color: var(--ion-color-primary);"></ion-icon>
+      {{ 'TAREAMENOSPROGRE' | translate }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <!-- Título de la tarea -->
+    <ion-item lines="none">
+      <ion-icon name="create-outline" slot="start" color="var(--ion-titulo-dashboard-color)"></ion-icon>
+      <ion-label>
+        <h2>{{ leastCompletedTask?.title }}</h2>
+        <p>{{ leastCompletedTask?.description }}</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Barra de progreso con bordes redondeados -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" [style.width]="leastCompletedTask?.completionPercentage + '%'">
+        {{ leastCompletedTask?.completionPercentage }}%
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>

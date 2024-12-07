@@ -1,0 +1,70 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="navigateToSubjects()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">{{ 'APUNTES' | translate }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="addOrUpdateNote()" class="add-task-button">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <br>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let note of notes" size="12" size-md="6" size-lg="4">
+          <ion-card class="note-card">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12" class="ion-text-center">
+                  <div class="note-header">
+                    <div class="title">{{ note.title }}</div>
+                    <p>{{ note.description }}</p>
+                  </div>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="12">
+                  <div class="note-actions">
+                    <ion-button (click)="addOrUpdateNote(note)" class="note-btn" size="small">
+                      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="confirmDeleteNote(note)" class="note-btn" color="danger" size="small">
+                      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                    </ion-button>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- LOADING NOTAS-->
+      <ion-row *ngIf="loading">
+        <ion-col size="12" *ngFor="let p of [1,1,1,1]">
+          <ion-card mode="ios">
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- NO HAY NOTAS-->
+      <ion-row *ngIf="!loading && !notes.length">
+        <ion-col size="12" class="empty">
+          <ion-icon name="document-outline"></ion-icon>
+          <h4>{{ 'NOAPUNTES' | translate }}</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

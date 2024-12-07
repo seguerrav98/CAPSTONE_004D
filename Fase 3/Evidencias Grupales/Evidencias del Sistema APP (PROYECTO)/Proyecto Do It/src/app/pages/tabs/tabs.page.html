@@ -1,0 +1,28 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <!-- Tab Home -->
+    <ion-tab-button tab="dashboard">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- Tab Subjects -->
+    <ion-tab-button tab="subjects">
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- Tab Calendar -->
+    <ion-tab-button tab="calendar">
+      <ion-icon name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- Tab Profile -->
+    <ion-tab-button tab="reminders">
+      <ion-icon name="alarm-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- Botón de Menú -->
+    <ion-tab-button (click)="openMenu($event)">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

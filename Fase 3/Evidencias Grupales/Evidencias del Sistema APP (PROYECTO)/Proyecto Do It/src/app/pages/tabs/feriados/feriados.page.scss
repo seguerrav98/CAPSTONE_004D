@@ -1,0 +1,54 @@
+/* Estilo general para el contenido /
+ion-content {
+  --ion-background-color: #f4f4f9;
+  padding: 16px;
+}
+
+/ Estilo del formulario /
+.form-container {
+  margin-bottom: 20px;
+}
+
+ion-item {
+  border-radius: 10px;
+  margin: 8px 0;
+  --background: #ffffff;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/ Estilo de los ítems de feriados /
+.holiday-item {
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 8px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  align-items: center;
+}
+
+.holiday-item ion-icon {
+  font-size: 24px;
+}
+
+/ Estilo de las fechas /
+.holiday-date {
+  color: #6c757d;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/ Estilo para cuando no hay feriados */
+.no-holidays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  color: #a6a6a6;
+}
+
+.no-holidays ion-icon {
+  margin-bottom: 10px;
+  color: #a6a6a6;
+}

@@ -1,0 +1,39 @@
+.item-header {
+    --padding-top: 30px;
+
+    ion-label {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+}
+
+ion-range {
+    padding-left: 10px;
+    padding-right: 10px;
+    --bar-background: rgba(128, 128, 128, 0.281);
+    --bar-background-active: var(--ion-color-success);
+    --height: 20px;
+    --knob-size: 5px;
+}
+
+.item-reorder {
+    --min-height: 32px;
+}
+
+ion-footer {
+    background: var(--ion-color-light);
+}
+
+ion-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.boton {
+
+    width: 300px;
+    height: 60px;
+
+}

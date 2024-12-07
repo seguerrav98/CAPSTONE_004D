@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title class="ion-text-center">{{ 'CONFIG' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br>
+  <div class="settings-container">
+    <ion-list>
+      <ion-item lines="full">
+        <ion-icon color="#ffffff" name="moon-outline" slot="start"></ion-icon> <!-- Ícono de luna -->
+        <ion-label>{{ 'MODOOSCURO' | translate }}</ion-label>
+        <ion-toggle [(ngModel)]="darkMode" (ionChange)="setTheme(darkMode)" slot="end"></ion-toggle> <!-- Toggle para el modo oscuro -->
+      </ion-item>
+    </ion-list>
+  </div>
+<br>
+  <div class="settings-container">
+    <ion-item lines="full">
+      <ion-icon color="#ffffff" name="notifications-outline" slot="start"></ion-icon> <!-- Ícono de campana -->
+      <ion-label>{{ 'NOTIFICACIONES' | translate }}</ion-label>
+      <ion-toggle disabled="true" slot="end"></ion-toggle> <!-- Botón de notificaciones inactivo por ahora -->
+    </ion-item>
+  </div>
+<br><br><br>
+  <div class="settings-container">
+    <ion-button (click)="signOut()" expand="full" color="danger">{{ 'CERRARSESION' | translate }}</ion-button>
+  </div>
+
+    <!-- Contenido principal de la página -->
+  
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="openMenu($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  
+</ion-content>

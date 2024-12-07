@@ -1,0 +1,78 @@
+ion-card {
+  border-radius: 15px;
+  padding: 1px;
+  background: var(--ion-color-light);  /* Fondo de la tarjeta */
+  color: var(--ion-color-dark);  /* Texto oscuro para modo claro */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se distribuyan en columna */
+  justify-content: space-between; /* Espacio entre los elementos */
+}
+
+.note-card {
+  background: var(--ion-color-light);  /* Fondo de la tarjeta */
+  color: var(--ion-color-dark);
+  display: flex;
+  flex-direction: column; /* Asegura la estructura vertical */
+  justify-content: space-between;
+  padding-bottom: 40px; /* Se da espacio al final para los botones */
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+  margin-bottom: 5px;
+}
+
+.note-header {
+  margin-bottom: 12px;
+  color: var(--ion-color-dark);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;  /* Ya no es necesario el posicionamiento absoluto */
+  margin-top: 5px;  /* Añade espacio entre el contenido y los botones */
+}
+
+.note-btn {
+  height: 30px;
+  width: 130px;
+}
+
+.empty {
+  padding-top: 15vh;
+  opacity: 0.6;
+  text-align: center;
+
+  ion-icon {
+    font-size: 120px;
+    color: var(--ion-color-primary);
+  }
+
+  h4 {
+    margin-top: 10px;
+    color: var(--ion-color-dark);
+  }
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .note-btn {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}

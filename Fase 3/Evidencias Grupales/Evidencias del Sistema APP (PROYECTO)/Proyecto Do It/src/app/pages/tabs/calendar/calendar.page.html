@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">{{ 'CALENDARIOEVENTOS' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="calendar-content">
+  <br>
+  <ion-item>
+    <ion-label position="floating">{{ 'SELECFECHA' | translate }}</ion-label>
+    <br><br>
+    <ion-datetime
+      color="primary"
+      [min]="todayDate"
+      display-format="DD MMM YYYY"
+      pickerFormat="DD MMM YYYY"
+      (ionChange)="onDateChange($event)"
+    >
+    <span slot="time-label">Hora</span>
+  </ion-datetime>
+  </ion-item>
+
+  <ion-button expand="block" color="primary" (click)="openAddEventModal()">
+    {{ 'AGREGAREVENTO' | translate }}
+  </ion-button>
+
+  <div *ngIf="eventsForSelectedDate.length > 0; else noEvents">
+    <h2>{{ 'EVENTOSPARAEL' | translate }} {{ selectedDate | date: 'fullDate'}}</h2>
+    <ion-list>
+      <ion-item-sliding *ngFor="let event of eventsForSelectedDate" class="event-item">
+        <ion-item>
+        <ion-label>
+          <h3 class="event-title">{{ event.title }}</h3>
+          <p class="event-description">{{ event.description }}</p>
+        </ion-label>
+        <ion-note slot="end" class="event-time">{{ convertToDate(event.date) | date: 'shortTime' }}</ion-note>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option class="boton-transparente" (click)="editEvent(event)">
+        <ion-icon color="primary" slot="icon-only" name="create-outline"></ion-icon>
+      </ion-item-option>
+
+        <ion-item-option class="boton-transparente" color="danger" (click)="deleteEvent(event)">
+        <ion-icon color="danger" slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-item-option>
+
+      </ion-item-options>
+    
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+  <ng-template #noEvents>
+    <p>{{ 'NOEVENTOSFECHASELEC' | translate }}</p>
+  </ng-template>
+</ion-content>

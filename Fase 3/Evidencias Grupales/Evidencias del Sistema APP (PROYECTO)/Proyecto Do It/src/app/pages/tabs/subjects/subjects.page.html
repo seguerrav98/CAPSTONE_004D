@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'ASIGNATURAS' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openSubjectForm()" class="add-task-button">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-label class="titulo">{{ 'SELECTSUBJECT' | translate }}</ion-label>
+  <br><br>
+  <ion-list>
+    <ion-item *ngFor="let subject of subjects" (click)="selectSubject(subject.id)" [class.selected]="selectedSubjectId === subject.id">
+      <ion-label>
+        <h2>{{ subject.name }}</h2>
+        <p>{{ subject.description }}</p>
+      </ion-label>
+      <br><br><br>
+      <ion-buttons slot="end">
+        <ion-icon (click)="openSubjectForm(subject)" slot="end" name="create-outline"></ion-icon>
+        <ion-icon (click)="deleteSubject(subject.id)" slot="end" name="trash-outline"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <div class="assignments-shortcut">
+    <ion-button expand="block" (click)="navigateToTasks()" class="shortcut-btn">
+      <ion-icon name="list-outline"></ion-icon>
+      {{ 'TAREAS' | translate }}
+    </ion-button>
+    <ion-button expand="block" (click)="navigateToNotes()" class="shortcut-btn">
+      <ion-icon name="document-outline"></ion-icon>
+      {{ 'NOTAS' | translate }}
+    </ion-button>
+  </div>
+</ion-content>

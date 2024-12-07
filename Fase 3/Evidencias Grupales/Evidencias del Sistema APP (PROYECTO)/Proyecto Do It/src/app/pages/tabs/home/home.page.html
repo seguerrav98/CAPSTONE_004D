@@ -1,0 +1,86 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="navigateToSubjects()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">{{ 'TAREAS' | translate }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="addOrUpdateTask()" class="add-task-button">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<br>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let task of tasks" size="12" size-md="6" size-lg="4">
+          <ion-card class="task-card">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12" class="ion-text-center">
+                  <div class="task-header">
+                    <div class="title">{{ task.title }}</div>
+                    <p>{{ task.description }}</p>
+                  </div>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="5" class="ion-text-center">
+                  <circle-progress
+                    [percent]="getPercentage(task)"
+                    [radius]="60"
+                    [outerStrokeWidth]="6"
+                    [innerStrokeWidth]="4"
+                    [outerStrokeColor]="'#78C000'"
+                    [innerStrokeColor]="'#C7E596'"
+                    [animation]="true"
+                    [titleColor]="'var(--ion-color-dark)'"
+                    [animationDuration]="300"
+                    [subtitle]="'Progreso'">
+                  </circle-progress>
+                </ion-col>
+                <ion-col size="7">
+                  <div class="task-actions">
+                    <br>
+                    <ion-button (click)="addOrUpdateTask(task)" class="task-btnn" size="small">
+                      {{ 'MODIFICAR' | translate }}
+                      <ion-icon slot="end" name="create-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="confirmDeleteTask(task)" class="task-btnn" color="danger" size="small">
+                      {{ 'ELIMINAR' | translate }}
+                      <ion-icon slot="end" name="trash-outline"></ion-icon>
+                    </ion-button>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- NO HAY TAREAS-->
+      <ion-row *ngIf="loading">
+        <ion-col size="12" *ngFor="let p of [1,1,1,1]">
+          <ion-card mode="ios">
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- NO HAY TAREAS-->
+      <ion-row *ngIf="!loading && !tasks.length">
+        <ion-col size="12" class="empty">
+          <ion-icon name="create-outline"></ion-icon>
+          <h4>{{ 'NOTAREAS' | translate }}</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

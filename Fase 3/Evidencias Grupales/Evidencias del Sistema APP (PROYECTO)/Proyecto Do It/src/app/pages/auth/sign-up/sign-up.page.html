@@ -1,0 +1,56 @@
+
+<ion-content>
+
+  <header>
+    <ion-toolbar color="primary">
+      <ion-title></ion-title>
+    
+    <ion-buttons class="add-task-button" slot="start">
+      <ion-button [routerLink]="['/index']"> <!-- Botón de Volver atrás -->
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </header>
+  <br><br>
+    <app-logo></app-logo>
+  <div class="content">
+    <h2 style="font-weight: bold; color: var(--ion-text-color);">{{ "CREACUENTA" | translate }}</h2>
+    <br>
+    <div class="d-flex-center">
+      <form (keyup.enter)="submit()" (ngSubmit)="submit()" class="ion-text-center">
+
+
+        <app-custom-input autocomplete="name" [control]="form.controls.name" type="text"  label='{{ "NOMBREYAPELLIDO" | translate}}' icon="person-outline"></app-custom-input>  
+        <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.dirty">
+          <div *ngIf="form.controls.name.errors?.['required']">{{ 'INGRESANOMBRE' | translate }}</div>
+          <div *ngIf="form.controls.name.errors?.['minlength']" >{{ 'INGRESAVALIDNOMBRE' | translate }}</div>
+        </div>
+
+        <app-custom-input autocomplete="email" [control]="form.controls.email" type="email" label='{{ "CORREO" | translate}}' icon="mail-outline"></app-custom-input>  
+        <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.dirty">
+          <div *ngIf="form.controls.email.errors?.['required']">{{ "INGRESAEMAIL" | translate }}</div>
+          <div *ngIf="form.controls.email.errors?.['email']" >{{ "INGRESAVALIDEMAIL" | translate }}</div>
+        </div>
+
+        <app-custom-input [control]="form.controls.password" type="password" label='{{ "CONTRA" | translate}}' icon="lock-closed-outline"></app-custom-input>  
+        <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.dirty">
+          <div *ngIf="form.controls.password.errors?.['required']">{{ "INGRESACONTRA" | translate }}</div>
+        </div>
+        
+        <app-custom-input [control]="form.controls.confirmPassword" type="password" label='{{ "RECONTRA" | translate}}' icon="checkmark-circle-outline"></app-custom-input>  
+        <div class="validators" *ngIf="form.controls.confirmPassword.errors && form.controls.confirmPassword.dirty">
+          <div *ngIf="form.controls.confirmPassword.errors?.['required']">{{ "INGRESACONTRA" | translate }}</div>
+          <div *ngIf="form.controls.confirmPassword.errors?.['noMatch']">{{ "CONTRANOCOINCIDE" | translate }}</div>
+        </div>
+
+        <ion-button color="primary" class="ion-margin-vertical ion-button-register" [disabled]="form.invalid" type="submit" shape="round">
+          {{ "REGISTRATE" | translate }}
+          <ion-icon slot="end" name="person-add-outline"></ion-icon>
+        </ion-button>
+
+
+      </form>
+    </div>
+  </div>
+</ion-content>

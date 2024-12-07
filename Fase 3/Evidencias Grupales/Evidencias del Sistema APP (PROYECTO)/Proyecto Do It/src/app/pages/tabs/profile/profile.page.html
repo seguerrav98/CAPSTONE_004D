@@ -1,0 +1,26 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">{{ 'PERFIL' | translate }}</ion-title>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/tabs/dashboard']" class="add-task-button">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<br><br><br>
+  <div class="content ion-text-center">
+    <ion-icon class="avatar" name="person-circle-outline"></ion-icon>
+    <h1>{{user.name}}</h1>
+    <div>{{user.email}}</div>
+
+  </div>
+</ion-content>

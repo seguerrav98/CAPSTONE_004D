@@ -1,0 +1,53 @@
+.calendar-content {
+    padding: 16px;
+  }
+  
+  ion-item {
+    --border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    color: var(--ion-event-title-color);
+    padding: 8px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  .calendar-content {
+    padding: 10px;
+  
+    ion-datetime {
+      width: 100%; /* Hace que ocupe el 100% del contenedor */
+      --padding-start: 1px;
+      --padding-end: 1px;
+      border-radius: 16px;
+      --background: #fff1f2;
+      --background-rgb: 255, 241, 242;
+      background-color: var(--ion-calendar-background-color); /* Fondo blanco para el ion-datetime en modo claro */
+      color: var(--ion-calendar-text-color);
+  
+      /* Ajustamos la altura y el ancho para que en pantallas grandes sea más grande */
+      @media (min-width: 1024px) { /* Pantallas grandes (tabletas y monitores) */
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto; /* Centra el calendario en pantallas grandes */
+      }
+    }
+  }
+  
+  
+  /* Estilos por defecto para el modo claro */
+// .calendar-content {
+//   padding: 10px;
+//   background-color: var(--ion-calendar-background-color); /* Fondo blanco en modo claro */
+//   color: var(--ion-calendar-text-color);
+
+//   ion-button {
+//     --background: #ffffff; /* Fondo azul para el botón */
+//     --color: black; /* Texto blanco en el botón */
+//   }
+// }

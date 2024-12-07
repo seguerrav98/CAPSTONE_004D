@@ -1,0 +1,216 @@
+{
+    
+
+    "index":"index",
+    "INICIARSESION":"Iniciar sesión",
+    "SINCUENTA":"¿No tienes cuenta?",
+    "recuperarcontra":"recuperarcontra",
+    "RECUPERARCONTRA":"Recuperar Contraseña",
+    "CORREOELECTRONICO":"Correo Electrónico",
+    "ENVIARCORREOREC":"Enviar Correo de Recuperación",
+
+    "auth":"auth",
+    "BIENVENIDO":"Bienvenido a Do It",
+    "INGRESAEMAIL":"Ingresa tu email",
+    "INGRESAVALIDEMAIL":"Ingresa un email valido",
+    "INGRESACONTRA":"Ingresa tu contraseña",
+    "OLVCONTRA":"¿Olvidaste tu contraseña?",
+    "CORREO":"Correo",
+    "CONTRA":"Contraseña",
+    "RECONTRA":"Confirmar Contraseña",
+
+    "sign up":"sign up",
+    "CREACUENTA":"Crea tu cuenta",
+    "INGRESANOMBRE":"Ingresa tu nombre",
+    "INGRESAVALIDNOMBRE":"Ingresa un nombre valido",
+    "CONTRANOCOINCIDE":"Las contraseñas no coinciden",    
+    "REGISTRATE":"Regístrate",
+    "NOMBREYAPELLIDO": "Nombre",
+
+    "IDIOMA":"Idioma",
+    "SELECCION":"Selecciona",
+
+    "about us":"about us",
+    "SOBRENOSOTROS":"Sobre nosotros",
+    "QUIENESSOMOS":"¿Quiénes somos?",
+    "QUIENESSOMOSTEXT":"Somos un grupo de estudiantes del instituto profesional DUOC UC comprometidos en brindar soluciones a una de las problemáticas más comunes en el ámbito académico: la procrastinación estudiantil. A través de herramientas digitales y estrategias personalizadas, buscamos ayudar a los estudiantes a organizar su tiempo, mejorar su productividad y alcanzar sus metas académicas de manera más efectiva.", 
+    "NUESTRAMISION":"Nuestra misión",
+    "NUESTRAMISIONTEXT":"Nuestra misión es proporcionar a los estudiantes las herramientas y el soporte necesario para enfrentar la procrastinación y aumentar su eficiencia académica. Creemos que, con el enfoque correcto, cada estudiante puede aprender a gestionar su tiempo de manera efectiva y lograr sus objetivos.",
+    "NUESTROSVALORES":"Nuestros valores",
+    "COMPROMISO":"Compromiso:",
+    "INNOVACION":"Innovación:",
+    "EMPATIA":"Empatía:",
+    "COMPROMISOTEXT":"Estamos dedicados a ayudar a nuestros compañeros a superar desafíos académicos.",
+    "INNOVACIONTEXT":"Siempre buscamos nuevas maneras de mejorar el enfoque en el estudio.",
+    "EMPATIATEXT":"Comprendemos las dificultades que enfrentan los estudiantes, y ofrecemos soluciones a medida.",
+
+
+    "CREARASIGN":"Crear Asignatura",
+    "NOMASIGN":"Nombre de la Asignatura",
+    "GUARDARASIGN":"Guardar Asignatura",
+
+    "book search":"book search",
+    "BUSQUEDALIBROS":"Busqueda de libros",
+    "BUSQUEDA":"Ingrese título del libro",
+    "BUSCAR":"Buscar",
+    "NORESULTADOS":"No se han encontrado resultados",
+
+    "calendario":"calendario",
+    "CALENDARIOEVENTOS":"Calendario de Eventos",
+    "SELECFECHA":"Selecciona una fecha:",
+    "AGREGAREVENTO":"Agregar Evento",
+    "EVENTOSPARAEL":"Eventos para el",
+    "EDITAR":"Editar",
+    "NOEVENTOSFECHASELEC":"No hay eventos para la fecha seleccionada",
+    "MODEVENTO":"Modificar Evento",
+    "AGREEVEN":"Agregar Evento",
+    "NOMEVEN":"Nombre del Evento",
+    "DESCEVEN":"Descripcion del Evento",
+    "GUARDAREVEN":"Guardar Evento",
+    "MENSAJECOMPLECAMPOS":"Por favor, completa todos los campos requeridos.",
+    "CONFIRMAR_ELIMINACION": "Confirmar eliminación",
+    "MENSAJE_ELIMINAR_EVENTO": "¿Estás seguro de que deseas eliminar este evento?",
+    "EVENTO_ELIMINADO": "Evento eliminado correctamente.",
+    "ERROR_ELIMINAR_EVENTO": "Error al eliminar el evento.",
+
+    "CERRARSESIONHEADER": "Cerrar sesión",
+    "CERRARSESIONMESSAGE": "¿Quieres cerrar sesión?",
+    "CANCELAR": "Cancelar",
+    "CONFIRMARCIERRE": "Sí, cerrar",
+
+    "dashboard":"dashboard",
+    "BIENVENIDODASH":"Bienvenido,",
+    "EVENTOSDELDIA":"Eventos del Día",
+    "NOEVENTOS":"No tienes eventos para hoy.",
+    "RECORDATORIOVENCER":"Recordatorio Próximo a Vencer",
+
+    "notes":"notes",
+    "APUNTES":"Apuntes",
+    "NOAPUNTES":"No tienes apuntes",
+
+    "reminders":"reminders",
+    "RECORDATORIOS":"Recordatorios",
+    "FECHALIMITE":"Fecha límite:",
+    "NORECORDATORIOS":"No tienes recordatorios",
+    
+    "CREAREVENTO":"Crear evento",
+
+    "NOTAS":"Apuntes",
+    "apuntes":"apuntes",
+    "MODAPUNTE":"Modificar Apunte",
+    "NUEVOAPUNTE":"Nuevo Apunte",
+    "CAMPO4CARAC":"Este campo requiere al menos 4 caracteres",
+    "INGREDESCRIPCION":"Ingresa la descripción",
+    "CREARAPUNTE":"Crear Apunte",
+
+    "MODRECORDATORIO":"Modificar Recordatorio",
+    "AGREGRECORDATORIO":"Agregar Recordatorio",
+    "HABILITADO":"Habilitado",
+    "CREARRECORDATORIO":"Crear Recordatorio",
+   
+   
+    "MENU":"Menú",
+    "CUENTA":"Cuenta",
+    "MODASIGNATURA":"Modificar Asignatura",
+    "AGREGASIGNATURA":"Agregar Asignatura",
+    "NOMASIG":"Nombre de la Asignatura",
+    "CREARASIG":"Crear Asignatura",
+    "SECCION":"Sección",
+
+
+
+
+
+    "FERIADOSCHILE":"Feriados en Chile",
+    "FECHAFERI":"Fecha:",
+    "TIPOFERI":"Tipo de Feriado:",
+    "IRREFERI":"Irrenunciable:",
+
+    "home":"home",
+    "TAREAS":"Tareas",
+    "MODIFICAR":"Modificar",
+    "ELIMINAR":"Eliminar",
+    "NOTAREAS":"No tienes tareas",
+    "MODTAREA":"Modificar Tarea",
+    "NUEVATAREA":"Nueva Tarea",
+    "TITULO":"Título",
+    "INGRETITULO":"Ingresa el titulo",
+    "CAMPO4CARACT":"Este campo requiere al menos 4 caracteres",
+    "DESCRIPCION":"Descripcion",
+    "INGREDESC":"Ingresa una descripcion",
+    "ACTIVIDADES":"Actividades",
+    "PROGRESO":"Progreso:",
+    "GUARDARCAMBIOS":"Guardar Cambios",
+    "CREATAREA":"Crear Tarea",
+    
+
+    "profile":"profile",
+    "PERFIL":"Perfil",
+
+    "settings":"settings",
+    "CONFIG":"Configuración",
+    "MODOOSCURO":"Modo Oscuro",
+    "NOTIFICACIONES":"Activar Notificaciones",
+    "CERRARSESION":"Cerrar Sesión",
+
+    "subjects":"subjects",
+    "ASIGNATURAS":"Asignaturas",
+    "tabs":"tabs",
+    "INICIO":"Inicio",
+    "CALENDARIO":"Calendario",
+    "AJUSTES":"Ajustes",
+    "FERIADOS":"Feriados",
+    "BIBLIOTECA":"Biblioteca",
+    "ELIMINARTAREA": "Eliminar tarea",
+    "MENSAJEELIMINARTAREA": "¿Quieres eliminar esta tarea?",
+    "SIELIMINAR": "Sí, eliminar",
+    "MENSAJE_ELIMINAR_ASIGNATURA": "¿Estás seguro de que deseas eliminar esta asignatura?",
+    "ASIGNATURA_ELIMINADA": "Asignatura eliminada correctamente.",
+    "ERROR_ELIMINAR_ASIGNATURA": "Error al eliminar la asignatura.",
+    "CONFIRMAR_ELIMINACION_ASIGNATURA": "Confirmar eliminación",
+    "SEALIMITE": "Se ha alcanzado el límite de solicitudes. Intenta más tarde.",
+    "ERRORLIBROS": "Hubo un error al obtener los libros.",
+    "ESTADO_RECORDATORIO_ACTUALIZADO": "Estado del recordatorio actualizado",
+    "ERROR_ACTUALIZAR_RECORDATORIO": "Hubo un error al actualizar el estado del recordatorio",
+    "RECORDATORIO_ELIMINADO": "Recordatorio eliminado exitosamente",
+    "ERROR_ELIMINAR_RECORDATORIO": "Hubo un error al eliminar el recordatorio",
+    "ELIMINAR_RECORDATORIO": "Eliminar recordatorio",
+    "MENSAJE_ELIMINAR_RECORDATORIO": "¿Quieres eliminar este recordatorio?",
+    "SI_ELIMINAR": "Sí, eliminar",
+    "SELECCIONA_ASIGNATURA": "Primero selecciona una asignatura.",
+    "ELIMINAR_NOTA": "Eliminar nota",
+    "MENSAJE_ELIMINAR_NOTA": "¿Quieres eliminar esta nota?",
+    "NOTA_ELIMINADA": "Nota eliminada exitosamente",
+    "ELIMINADO_CORRECTO":"Evento eliminado correctamente.",
+    "FECHA":"Fecha:",
+    "CERRAR_SESION": "Cerrar sesión",
+    "MENSAJE_CERRAR_SESION": "¿Quieres cerrar sesión?",
+    "SI_CERRAR": "Sí, cerrar",
+    "AUTENTICANDO": "Autenticando...",
+    "BIENVENIDA": "Te damos la bienvenida",
+    "ERROR_AUTENTICACION": "Ocurrió un error al autenticarte.",
+    "CREDENCIALES_INVALIDAS": "Las credenciales de inicio de sesión son incorrectas.",
+    "PASSWORD_RESET_SUCCESS": "Se ha enviado un correo de restablecimiento de contraseña a tu dirección de correo electrónico.",
+    "PASSWORD_RESET_ERROR": "Ocurrió un error al intentar restablecer la contraseña.",
+    "MENSAJEBIENVENIDA":"¡Que tengas un día maravilloso lleno de éxitos y buenas vibras!",
+    "PROXRECOR":"Próximo Recordatorio",
+    "FECHAVENC":"Fecha de vencimiento:",
+    "TAREAMENOSPROGRE":"Tarea con Menos %",
+    "NOEVENT":"No tienes eventos para hoy.",
+    "NORECOR":"¡No tienes recordatorios pendientes!",
+    "DISFRUTA":"¡Disfruta tu día sin preocupaciones!",
+    "SELECTSUBJECT":"Seleccione una asignatura:",
+    "AÑO":"Año:",
+    "PAIS":"Pais:",
+    "FERIADOSDISPO":"No hay feriados disponibles para este año o país."
+
+
+
+
+
+
+
+
+
+
+}

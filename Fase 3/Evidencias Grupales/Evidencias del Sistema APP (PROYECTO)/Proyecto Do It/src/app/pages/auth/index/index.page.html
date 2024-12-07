@@ -1,0 +1,19 @@
+<ion-content>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+      <app-logo></app-logo>
+  
+    
+      <br><br><br><br><br><br><br>
+      <div class="d-flex-center">
+  
+          <ion-button routerLink="/auth" class="ion-margin-vertical" color="primary"  shape="round">
+            {{ "INICIARSESION" | translate }}
+          </ion-button>
+          
+    </div>
+    <div class="sign-up">
+      <div>{{ "SINCUENTA" | translate }} </div>
+      <a [routerLink]="['/auth/sign-up']" style="color: rgb(39, 39, 255); text-decoration: underline;">{{ "REGISTRATE" | translate }}</a>
+    </div>
+  </ion-content>
+  

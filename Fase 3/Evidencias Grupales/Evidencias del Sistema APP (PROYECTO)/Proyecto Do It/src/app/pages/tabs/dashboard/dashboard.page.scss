@@ -1,0 +1,415 @@
+ion-card {
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+ion-card-header {
+  background-color: var(--ion-color-primary-shade);
+  color: var(--ion-color-light);
+  border-radius: 15px 15px 0 0;
+}
+
+ion-card-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+ion-label {
+  font-size: 1em;
+  color: var(--ion-color-dark);
+}
+
+ion-skeleton-text {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-left: 2px solid var(--ion-color-primary);
+}
+
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--ion-color-primary);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 4px;
+}
+
+.timeline-content {
+  background-color: var(--ion-color-light);
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.event-time {
+  font-size: 0.8em;
+  color: var(--ion-color-medium);
+  margin-top: 4px;
+}
+
+.timeline-event {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.welcome-card {
+  background-color: var(--ion-color-light);
+  text-align: center;
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--ion-titulo-dashboard-color);
+}
+
+.no-reminder-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--ion-color-secondary);
+}
+
+.reminder-time {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+  margin-top: 4px;
+}
+
+.welcome-card, .no-reminder-message, .reminder-time {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-card {
+  --padding-start: 15px;
+}
+
+ion-item {
+  display: flex;
+  align-items: center;
+}
+
+ion-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+ion-label h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+
+ion-label p {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+ion-card {
+  --padding-start: 15px;
+}
+
+ion-item {
+  display: flex;
+  align-items: center;
+}
+
+ion-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+ion-label h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+
+ion-label p {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+/* Barra de progreso animada */
+ion-progress-bar {
+  --progress-background: var(--ion-color-light);
+  --progress-background-active: var(--ion-color-tertiary);
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  animation: fillProgress 1.5s ease-in-out; /* Animación */
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Estilo de la tarjeta del recordatorio */
+.reminder-card {
+  --padding-start: 15px;
+}
+
+.animated-reminder {
+  animation: heartbeat 0.6s ease-in-out 1; /* La animación solo ocurre una vez */
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1); /* Un poco más pronunciado para un solo latido */
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+ion-item h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+
+ion-item p {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+.reminder-time {
+  font-size: 12px;
+  color: var(--ion-color-danger);
+  margin-top: 8px;
+}
+
+ion-item {
+  ion-label {
+    white-space: normal; /* Permite que el texto se ajuste y salte de línea */
+    overflow: visible; /* Permite mostrar todo el contenido */
+    text-overflow: unset; /* Quita los puntos suspensivos al final */
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+    margin: 0; /* Ajustes de margen si es necesario */
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--ion-color-medium);
+    margin-top: 4px; /* Separación con el título */
+  }
+}
+
+.task-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.task-title h2 {
+  font-size: 18px;
+  color: var(--ion-color-dark);
+  margin: 0;
+}
+
+.progress-bar-container {
+  margin-top: 10px;
+  background-color: var(--ion-color-light);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.progress-bar {
+  height: 12px;
+  background-color: rgb(32, 187, 1);
+  color: #fff;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+  border-radius: 30px;
+  transition: width 0.3s ease-in-out;
+}
+
+ion-card {
+  margin: 10px;
+}
+
+ion-card-header {
+  background-color: var(--ion-color-primary-shade);
+  color: var(--ion-color-light);
+  border-radius: 15px 15px 0 0;
+}
+
+ion-card-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+ion-label {
+  font-size: 1em;
+  color: var(--ion-color-dark);
+}
+
+ion-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+ion-label h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+
+ion-label p {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+ion-card {
+  --padding-start: 15px;
+}
+
+ion-item {
+  display: flex;
+  align-items: center;
+}
+
+ion-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+ion-label h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ion-titulo-dashboard-color);
+}
+
+ion-label p {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+.timeline-event {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Barra de progreso animada */
+ion-progress-bar {
+  --progress-background: var(--ion-color-light);
+  --progress-background-active: var(--ion-color-tertiary);
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  animation: fillProgress 1.5s ease-in-out;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Ajustes de estilo */
+.task-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.task-title h2 {
+  font-size: 18px;
+  color: var(--ion-color-dark);
+  margin: 0;
+}
+
+.task-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.task-icon {
+  font-size: 32px;
+  color: var(--ion-titulo-dashboard-color);
+}

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isModal ? ("GUARDARCAMBIOS" | translate) : ("CREAREVENTO" | translate) }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="calendar-content">
+  <br>
+  <form (ngSubmit)="onSubmit()" [formGroup]="eventForm">
+    <ion-item>
+      <ion-label position="floating">{{ 'NOMEVEN' | translate }}</ion-label>
+      <ion-input formControlName="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'DESCEVEN' | translate }}</ion-label>
+      <ion-input formControlName="description" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'FECHA' | translate }}</ion-label>
+      <br>
+      <ion-datetime
+        display-format="HH:mm"
+        formControlName="time"
+        [min]="minDate"
+      ></ion-datetime>
+    </ion-item>
+
+
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="ion-text-center">
+    <ion-button (click)="onSubmit()" class="ion-margin boton" mode="ios" expand="block" type="submit" [disabled]="eventForm.invalid" shape="round">
+      {{event ? ("GUARDARCAMBIOS" | translate) : ('CREAREVENTO' | translate) }}
+    </ion-button>
+  </div>
+  </ion-footer>

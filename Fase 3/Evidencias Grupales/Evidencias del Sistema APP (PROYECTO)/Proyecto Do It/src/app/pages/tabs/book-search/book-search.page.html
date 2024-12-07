@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "BUSQUEDALIBROS" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchQuery" placeholder='{{ "BUSQUEDA" | translate }}'></ion-searchbar>
+  <ion-button expand="full" (click)="searchBooks(query)">{{ "BUSCAR" | translate }}</ion-button>
+
+  <ion-list *ngIf="books.length > 0">
+    <ion-item *ngFor="let book of books" [href]="book.volumeInfo.infoLink">
+      <ion-thumbnail slot="start" *ngIf="book.volumeInfo.imageLinks">
+        <img [src]="book.volumeInfo.imageLinks.thumbnail">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ book.volumeInfo.title }}</h2>
+        <p>{{ book.volumeInfo.authors?.join(', ') }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <p *ngIf="books.length === 0">{{ "NORESULTADOS" | translate }}</p>
+</ion-content>
+

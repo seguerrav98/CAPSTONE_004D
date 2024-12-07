@@ -1,0 +1,80 @@
+/* home.page.scss */
+ion-card {
+    border-radius: 15px;
+    padding: 1px;
+    background: var(--ion-color-light);  /* Fondo de la tarjeta */
+    color: var(--ion-color-dark);  /* Texto oscuro para modo claro */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    
+  }
+  
+  .task-card {
+    background: var(--ion-color-light);  /* Fondo de la tarjeta */
+    color: var(--ion-color-dark);
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--ion-color-dark);
+    margin-bottom: 5px;
+  }
+  
+  .task-header {
+    margin-bottom: 12px;
+  }
+  
+
+  
+  .task-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-title {
+    font-size: 20px;  /* Tamaño adecuado para el título */
+    font-weight: bold;
+    text-align: center;
+    margin: 16px 0;
+    color: var(--ion-color-dark);
+  }
+  
+.task-btnn{
+    height: 30px;
+    width: 130px;
+}
+
+  .empty {
+    padding-top: 15vh;
+    opacity: 0.6;
+    text-align: center;
+  
+    ion-icon {
+      font-size: 120px;
+      color: var(--ion-color-primary);
+    }
+  
+    h4 {
+      margin-top: 10px;
+      color: var(--ion-color-dark);
+    }
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .task-btn {
+      width: 100%;
+    }
+  
+    .task-title {
+      font-size: 18px;
+    }
+  }
+

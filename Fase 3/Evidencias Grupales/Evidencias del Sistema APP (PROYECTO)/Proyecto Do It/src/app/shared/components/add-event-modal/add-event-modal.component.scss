@@ -1,0 +1,17 @@
+  /* Estilos por defecto para el modo claro */
+  .calendar-content {
+    padding: 10px;
+    background-color: var(--ion-calendar-background-color); /* Fondo blanco en modo claro */
+    color: var(--ion-calendar-text-color);
+  
+    ion-datetime {
+      background-color: var(--ion-calendar-background-color); /* Fondo blanco para el ion-datetime en modo claro */
+      color: var(--ion-calendar-text-color);
+    }
+  
+    ion-button {
+      --background: #ffffff; /* Fondo azul para el botón */
+      --color: black; /* Texto blanco en el botón */
+    }
+  }
+  

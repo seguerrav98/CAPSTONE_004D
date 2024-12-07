@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'RECORDATORIOS' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addOrUpdateReminder()" class="add-task-button">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Lista de recordatorios -->
+    <ion-item-sliding *ngFor="let reminder of reminders" #slidingItem>
+      <ion-item class="reminder-item">
+        <ion-label>
+          <h2>{{ reminder.title }}</h2>
+          <p>{{ reminder.description }}</p>
+          <p>{{ 'FECHALIMITE' | translate }} {{ reminder.endDate | date:'dd MMM yyyy \'a las\' h:mm a' }}</p>
+        </ion-label>
+        <!-- Toggle en la derecha para habilitar/deshabilitar el recordatorio -->
+        <ion-toggle slot="end" [(ngModel)]="reminder.enabled" (ionChange)="updateReminderStatus(reminder)"></ion-toggle>
+      </ion-item>
+    
+      <!-- Opciones al deslizar hacia la izquierda -->
+      <ion-item-options side="end">
+        <ion-item-option (click)="addOrUpdateReminder(reminder)" class="boton-transparente">
+          <ion-icon color="primary" slot="icon-only" name="create-outline"></ion-icon>
+        </ion-item-option>
+        <ion-item-option (click)="confirmDeleteReminder(reminder)" class="boton-transparente">
+          <ion-icon color="danger" slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+    
+    
+  </ion-list>
+
+  <!-- Cargando recordatorios -->
+  <ion-list *ngIf="loading">
+    <ion-item *ngFor="let p of [1,1,1,1]">
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+    </ion-item>
+  </ion-list>
+
+  <!-- No hay recordatorios -->
+  <ion-row *ngIf="!loading && !reminders.length">
+    <ion-col size="12" class="empty">
+      <ion-icon name="time-outline"></ion-icon>
+      <h4>{{ 'NORECORDATORIOS' | translate }}</h4>
+    </ion-col>
+  </ion-row>
+</ion-content>

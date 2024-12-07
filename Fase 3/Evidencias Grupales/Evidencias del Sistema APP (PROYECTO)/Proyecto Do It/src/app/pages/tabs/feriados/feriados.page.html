@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'FERIADOS' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Formulario para seleccionar país y año -->
+  <ion-item>
+    <ion-label>{{ 'PAIS' | translate }}</ion-label>
+    <ion-select [(ngModel)]="countryCode" (ionChange)="loadHolidays()">
+      <ion-select-option value="CL">Chile</ion-select-option>
+      <ion-select-option value="MX">México</ion-select-option>
+      <ion-select-option value="US">Estados Unidos</ion-select-option>
+      <ion-select-option value="AR">Argentina</ion-select-option>
+      <ion-select-option value="ES">España</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>{{ 'AÑO' | translate }}</ion-label>
+    <ion-input
+      [(ngModel)]="year"
+      type="number"
+      placeholder="Ingrese el año"
+      (ionChange)="loadHolidays()"
+    ></ion-input>
+  </ion-item>
+
+  <!-- Mostrar lista de feriados -->
+  <ion-list>
+    <ion-item *ngFor="let holiday of holidays">
+      <ion-label>
+        <h2>{{ holiday.localName }}</h2>
+        <p>{{ holiday.date | date }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay feriados -->
+  <div *ngIf="holidays.length === 0" class="ion-text-center">
+    <p>{{ 'FERIADOSDISPO' | translate }}</p>
+  </div>
+</ion-content>

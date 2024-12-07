@@ -1,0 +1,73 @@
+/* variables.scss */
+:root {
+  --ion-color-primary: #362c2c; /* Tono café suave (para el modo claro) */
+  --ion-color-secondary: #F0E5D8; /* Beige claro (para el botón de agregar) */
+  --ion-color-light: #F4F5F8; /* Blanco suave (fondo claro) */
+  --ion-color-dark: #2A2A2A; /* Gris oscuro suave (para el modo oscuro) */
+  --ion-color-success: #A2D5AB; /* Verde suave */
+  --ion-color-warning: #FFD700; /* Amarillo suave */
+  --ion-color-danger: #F04E4E; /* Rojo suave */
+  --ion-note-background: #ffffff; /* Fondo blanco */
+  --ion-note-text-color: #000000; /* Texto negro */
+  --ion-color-rose: #831843;
+  --ion-color-rose-rgb: 131, 24, 67;
+  --ion-color-rose-contrast: #ffffff;
+  --ion-color-rose-contrast-rgb: 255, 255, 255;
+  --ion-color-rose-shade: #73153b;
+  --ion-color-rose-tint: #8f2f56;
+
+}
+
+/* Estilos para el tema oscuro */
+[color-theme="dark"] {
+  --ion-color-primary: #5C4C3D; /* Café suave para el modo oscuro */
+  --ion-color-secondary: #D6D2B1; /* Beige claro */
+  --ion-color-light: #2D2D2D; /* Fondo oscuro */
+  --ion-color-dark: #FFFFFF; /* Texto blanco */
+  --ion-background-color: #121212; /* Fondo oscuro */
+  --ion-text-color: #FFFFFF; /* Texto blanco */
+  --ion-toolbar-color: #FFFFFF;
+  --ion-event-title-color: #FFFFFF;
+  --ion-calendar-background-color: #121212;
+  --ion-color-step-300: #2D2D2D;
+  --ion-calendar-text-color: #ffffff;
+  --ion-boton-background-color:#121212;
+  --ion-asignatura-seleccionada-color:  rgba(0, 102, 26, 0.1);
+  --ion-titulo-dashboard-color:  #D6D2B1;
+  --ion-toolbar-login-color: #362c2c;
+  --ion-note-background: #000000; /* Fondo negro */
+  --ion-note-text-color: #ffffff; /* Texto blanco */
+
+
+}
+
+/* Modo claro */
+[color-theme="light"] {
+  --ion-background-color: #FFFFFF; /* Fondo blanco suave */
+  --ion-text-color: #000000; /* Texto negro */
+  --ion-toolbar-color: #FFFFFF;
+  --ion-event-title-color: #A67C52;
+  --ion-calendar-background-color: #ffffff;
+  --ion-color-step-300: #edeef0;
+  --ion-calendar-text-color: #000000;
+  --ion-boton-background-color:  rgba(255, 255, 255, 0.1);
+  --ion-asignatura-seleccionada-color:  #d1e7dd;
+  --ion-titulo-dashboard-color:  #5C4C3D;
+  --ion-toolbar-login-color: #362c2c;
+
+
+
+
+
+
+}
+
+.ion-color-rose {
+  --ion-color-base: var(--ion-color-rose);
+  --ion-color-base-rgb: var(--ion-color-rose-rgb);
+  --ion-color-contrast: var(--ion-color-rose-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-rose-contrast-rgb);
+  --ion-color-shade: var(--ion-color-rose-shade);
+  --ion-color-tint: var(--ion-color-rose-tint);
+}
+

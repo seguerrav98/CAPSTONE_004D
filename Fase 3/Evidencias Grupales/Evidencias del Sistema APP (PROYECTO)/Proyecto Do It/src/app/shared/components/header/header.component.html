@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- ==== Cerrar modal ==== -->
+      <ion-button  class="add-task-button" (click)="dismissModal()" *ngIf="isModal">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+
+      <!-- ==== Back button ==== -->
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <!-- ==== Cerrar modal ==== -->
+      <ion-button>
+        <ion-icon></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title *ngIf="title" [ngClass]="{'ion-text-center': centerTitle}">{{title}}</ion-title>
+
+    
+
+
+  </ion-toolbar>
+</ion-header>

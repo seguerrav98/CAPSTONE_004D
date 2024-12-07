@@ -1,0 +1,68 @@
+<ion-content color="light">
+  <app-header color="light" [centerTitle]=true [isModal]=true [title]="task ? ('MODTAREA' | translate) : ('NUEVATAREA' | translate)"></app-header>
+
+  
+
+  <app-custom-input [control]="form.controls.title" type="text" label='{{ "TITULO" | translate }}'></app-custom-input>
+  <div class="validators" *ngIf="form.controls.title.errors && form.controls.title.dirty">
+    <div *ngIf="form.controls.title.errors?.['required']">{{'INGRETITULO' | translate}}</div>
+    <div *ngIf="form.controls.title.errors?.['minlength']">{{'CAMPO4CARACT' | translate}}</div>
+  </div>
+
+  <app-custom-input [control]="form.controls.description" type="textarea" label='{{ "DESCRIPCION" | translate }}'
+    icon="person-outline"></app-custom-input>
+  <div class="validators" *ngIf="form.controls.description.errors && form.controls.description.dirty">
+    <div *ngIf="form.controls.description.errors?.['required']">{{ "INGREDESC" | translate }}</div>
+    <div *ngIf="form.controls.description.errors?.['minlength']">{{ "CAMPO4CARACT" | translate }}</div>
+  </div>
+
+  <ion-item class="item-header" lines="none">
+    <ion-label>{{ "ACTIVIDADES" | translate }}</ion-label>
+    <span slot="end" *ngIf="form.value.items.length">
+      {{ "PROGRESO" | translate }} {{getPercentage()}}
+    </span>
+    <ion-button (click)="createItem()" slot="end" mode="ios">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-range [value]="getPercentage()"></ion-range>
+
+  <ion-list>
+
+
+    <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+
+      <div *ngFor="let item of this.form.value.items; index as i">
+        <ion-item lines="none">
+          <ion-checkbox slot="start" color="success" [(ngModel)]="item.completed"></ion-checkbox>
+          <ion-label class="ion-text-wrap">
+            {{ item.name }}
+          </ion-label>
+
+          <ion-buttons slot="end">
+            <ion-button (click)="removeItem(i)">
+              <ion-icon slot="start" name="trash-outline"></ion-icon>
+
+            </ion-button>
+          </ion-buttons>
+        
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="item-reorder"></ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+      </div>
+
+    </ion-reorder-group>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+<div class="ion-text-center">
+<ion-button class="ion-margin boton"  mode="ios" [disabled]="form.invalid" (click)="submit()"  shape="round">
+  {{ task ? ("GUARDARCAMBIOS" | translate) : ("CREATAREA" | translate) }}
+</ion-button>
+</div>
+</ion-footer>
